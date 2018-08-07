@@ -18,26 +18,12 @@ killTomcat()
 	fi
 }
 
-killPort()
-{
-	port=8090
-	#根据端口号查询对应的pid
-	pid=$(netstat -nlp | grep :$port | awk '{print $7}' | awk -F"/" '{ print $1 }')
-	echo "tomcat Id list :$pid"
-	#杀掉对应的进程，如果pid不存在，则不执行
-	if [ "pid" = ""]
-	then
-		echo "no tomcat pid alive"
-	else 
-		kill -9 $pid
-	fi
-}
 
 cd $PROJ_PATH/pipline
 mvn clean install
 
 #停止tomcat
-killPort()
+killTomcat()
 
 #删除原有工程
 #rm -rf $TOMCAT_APP_PATH/webapps/ROOT
