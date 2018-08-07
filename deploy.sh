@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/master bash
 #编译+部署
 
 #需要配置如下参数
