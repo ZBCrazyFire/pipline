@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthyCheck {
 	@RequestMapping("api/healthy/check")
 	public String HealthyCheckMethod() {
-		return "true";
+		return "true false";
 	}
 }
