@@ -42,4 +42,4 @@ mv pipline-0.0.1-SNAPSHOT.jar PIPLINE.jar
 #启动tomcat
 cd $WORK_PATH/
 #sh bin/startup.sh
-java -jar PIPLINE.jar > log.out 2>&1 &
+java -jar PIPLINE.jar --server.port=8090 > log.out 2>&1 &
