@@ -1,4 +1,4 @@
-#!/usr/bin/master bash
+#!/usr/bin/env bash
 #编译+部署
 
 #需要配置如下参数
@@ -29,7 +29,6 @@ killTomcat()
 #rm -rf $TOMCAT_APP_PATH/webapps/ROOT
 #rm -rf $TOMCAT_APP_PATH/webapps/ROOT.war
 #rm -rf $TOMCAT_APP_PATH/webapps/roder.war
-
 rm -rf $WORK_PATH/PIPLINE.jar
 
 
