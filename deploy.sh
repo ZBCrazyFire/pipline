@@ -18,21 +18,27 @@ killTomcat()
 	fi
 }
 
-#删除复制文件
-moveFile()
-{
-	rm -rf $WORK_PATH/PIPLINE.jar
-	cp $PROJ_PATH/pipline/target/pipline-0.0.1-SNAPSHOT.jar $WORK_PATH/
-	cd $WORK_PATH/
-	mv pipline-0.0.1-SNAPSHOT.jar PIPLINE.jar
-}
-
 cd $PROJ_PATH/pipline
 mvn clean install
 
 #停止tomcat
-killTomcat\(\)
-moveFile()
+killTomcat
+
+#删除原有工程
+#rm -rf $TOMCAT_APP_PATH/webapps/ROOT
+#rm -rf $TOMCAT_APP_PATH/webapps/ROOT.war
+#rm -rf $TOMCAT_APP_PATH/webapps/roder.war
+rm -rf $WORK_PATH/PIPLINE.jar
+
+
+#复制新的工程
+#cp $PROJ_PATH/order/target/order.war $TOMCAT_APP_PATH/webapps/
+cp $PROJ_PATH/pipline/target/pipline-0.0.1-SNAPSHOT.jar $WORK_PATH/
+
+cd $WORK_PATH/
+#mv order.war ROOT.war
+mv pipline-0.0.1-SNAPSHOT.jar PIPLINE.jar
+
 #启动tomcat
 cd $WORK_PATH/
 #sh bin/startup.sh
