@@ -48,6 +48,7 @@ killTomcat()
 #mv order.war ROOT.war
 #mv pipline-0.0.1-SNAPSHOT.jar PIPLINE.jar
 
+
 moveFile()
 #启动tomcat
 cd $WORK_PATH/
