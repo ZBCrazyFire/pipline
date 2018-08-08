@@ -29,7 +29,7 @@ killTomcat()
 #rm -rf $TOMCAT_APP_PATH/webapps/ROOT
 #rm -rf $TOMCAT_APP_PATH/webapps/ROOT.war
 #rm -rf $TOMCAT_APP_PATH/webapps/roder.war
-rm -rf $WORK_PATH/PIPLINE.jar
+#rm -rf $WORK_PATH/PIPLINE.jar
 
 
 #复制新的工程
