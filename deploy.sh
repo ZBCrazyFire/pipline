@@ -31,7 +31,7 @@ cd $PROJ_PATH/pipline
 mvn clean install
 
 #停止tomcat
-killTomcat();
+killTomcat\(\)
 moveFile()
 #启动tomcat
 cd $WORK_PATH/
